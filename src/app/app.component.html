@@ -2,3 +2,37 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+<table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef = "id">
+    <mat-header-cell *matHeaderCellDef> Id</mat-header-cell>
+    <mat-cell *matCellDef = "let e"> {{e.id}}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef = "first_name">
+    <mat-header-cell *matHeaderCellDef> First Name</mat-header-cell>
+    <mat-cell *matCellDef = "let e"> {{e.first_name}}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef = "last_name">
+    <mat-header-cell *matHeaderCellDef> Last Name</mat-header-cell>
+    <mat-cell *matCellDef = "let e"> {{e.last_name}}
+    </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef = "email">
+    <mat-header-cell *matHeaderCellDef> Email</mat-header-cell>
+    <mat-cell *matCellDef = "let e"> {{e.email}}
+    </mat-cell>
+  </ng-container>
+
+<ng-container matColumnDef = "gender">
+    <mat-header-cell *matHeaderCellDef> Gender</mat-header-cell>
+    <mat-cell *matCellDef = "let e"> {{e.gender}}
+    </mat-cell>
+  </ng-container>
+  
+</table>
